@@ -8,19 +8,49 @@
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
             //TODO: add any extra onload processing you may need here
+          getCurrentSelection();
         });
+        function on_nav_click(event) {
+         let a = event.target;
+     updateCurrentPage(a.innerHTML);
+     document.getElementsByTagName('title')[0].innerHTML = a.innerHTML;
+}
         function getCurrentSelection() {
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
-
+                const links = document.getElementsByTagName('a');
+                for(i=0;i<links.length;i++){
+                  links[i].addEventListener("click",  on_nav_click );
+}
                 //Note: likely you'll want to call updateCurrentPage towards the end
             }, 100);
         }
     </script>
     <style>
         /* TODO: make edits here */
-        
+        a:link { color: #FF0000; } /* CSS link color (red) */
+        a:hover { color: #00FF00; } /* CSS link hover (green) */
+        nav{
+            text-align:center;
+            height:35px;
+            background-color: royalblue;
+        }
+        nav>ul>li:before{
+            content:'✓';
+        }
+         nav > ul> li{
+           display: inline;
+           padding: 8px;
+           font-size:25px;
+            
+         }
+         h1{
+             text-transform: capitalize;
+         }
+         a{
+            text-transform: capitalize;
+         }
         
     </style>
     <!-- make the necessary edits above this line -->
