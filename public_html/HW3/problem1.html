@@ -12,17 +12,18 @@
         });
         function on_nav_click(event) {
          let a = event.target;
-     updateCurrentPage(a.innerHTML);
-     document.getElementsByTagName('title')[0].innerHTML = a.innerHTML;
-}
+         updateCurrentPage(a.innerHTML);
+         
+       }
         function getCurrentSelection() {
             setTimeout(() => {
+                
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
                 const links = document.getElementsByTagName('a');
                 for(i=0;i<links.length;i++){
-                  links[i].addEventListener("click",  on_nav_click );
-}
+                   links[i].addEventListener("click",  on_nav_click );
+                  }
                 //Note: likely you'll want to call updateCurrentPage towards the end
             }, 100);
         }
@@ -50,6 +51,9 @@
          }
          a{
             text-transform: capitalize;
+         }
+         body{
+             background-color:lightblue;
          }
         
     </style>
