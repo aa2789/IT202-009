@@ -49,7 +49,7 @@ require(__DIR__."/../../partials/nav.php");?>
      else{
          //TODO 4
          $db=getDB();
-         $stmt=$db->prepare("SELECT email, password FROM users WHERE email =:email");
+         $stmt=$db->prepare("SELECT email, password FROM Users where email= :email");
          try{
              $r=$stmt->execute([":email"=>$email]);
              if($r){
@@ -70,7 +70,7 @@ require(__DIR__."/../../partials/nav.php");?>
              }
          }
          catch(Exception $e){
-             echo "<pre?>" .var_export($e,true)."</pre>";
+             echo "<pre?>".var_export($e,true)."</pre>";
          }
      }
  }

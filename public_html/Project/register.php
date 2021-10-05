@@ -1,5 +1,5 @@
 <?php
-require(__DIR__."/../../lib/functions.php");
+require(__DIR__."/../../partials/nav.php");
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
@@ -31,12 +31,15 @@ require(__DIR__."/../../lib/functions.php");
       $password=se($_POST,"password","",false);
       $confirm=se($_POST,"confirm","",false);
     
-  }
+  
+  //TODO 3: validate/use
   $errors=[];
   if(empty($email)){
       array_push($errors, "email must be set");
   }
+  //sanitize
   $email=filter_var($email,FILTER_SANITIZE_EMAIL);
+  //validate
   if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
       array_push($errors,"Invalid email address");
   }
@@ -53,9 +56,22 @@ require(__DIR__."/../../lib/functions.php");
       array_push($errors,"Passwords don't match");
   }
   if(count($errors)>0){
-      echo "<pre?>".var_export($errors,true)."</pre>";
+      echo "<pre>".var_export($errors,true)."</pre>";
   }
   else{
       echo "Welcome, $email!";
+      //TODO 4
+      $hash=password_hash($password,PASSWORD_BCRYPT);
+      $db=getDB();
+      $stmt=$db->prepare("INSERT INTO Users (email,password) VALUES (:email,:password)");
+      try{
+          $stmt->execute([":email"=>$email,":password"=>$hash]);
+          echo "You've been registered!";
+      }
+      catch(Exception $e){
+          echo "There was a problem registering";
+          echo "<pre?>", var_export($e,true)."</pre>";
+      }
   }
+}
 ?>
