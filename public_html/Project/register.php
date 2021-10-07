@@ -35,44 +35,51 @@ require(__DIR__."/../../partials/nav.php");
   //TODO 3: validate/use
   $errors=[];
   if(empty($email)){
-      array_push($errors, "email must be set");
+      flash("email must be set");
+     // array_push($errors, "email must be set");
   }
   //sanitize
  // $email=filter_var($email,FILTER_SANITIZE_EMAIL);
  $email=sanitize_email($email);
   //validate
   if(!is_valid_email($email)){
-      array_push($errors,"Invalid email address");
+      flash("Invalid email address");
+      //array_push($errors,"Invalid email address");
   }
   if(empty($password)){
-      array_push($errors,"Password must be set");
+      flash("Paswword must be set");
+     // array_push($errors,"Password must be set");
   }
   if(empty($confirm)){
-      array_push($errors,"Confirm password must be set");
+      flash("confirm password must be set");
+     // array_push($errors,"Confirm password must be set");
   }
   if(strlen($password)<8){
-      array_push($errors,"Password must be 8 or more characters");
+      flash("Password must be 8 or more characters");
+     // array_push($errors,"Password must be 8 or more characters");
   }
   if(strlen($password)>0&&$password!==$confirm){
-      array_push($errors,"Passwords don't match");
+      flash("Passwords don't match");
+     // array_push($errors,"Passwords don't match");
   }
   if(count($errors)>0){
       echo "<pre>".var_export($errors,true)."</pre>";
   }
   else{
-      echo "Welcome, $email!";
+      flash("Welcome, $email!");
       //TODO 4
       $hash=password_hash($password,PASSWORD_BCRYPT);
       $db=getDB();
       $stmt=$db->prepare("INSERT INTO Users (email,password) VALUES (:email,:password)");
       try{
           $stmt->execute([":email"=>$email,":password"=>$hash]);
-          echo "You've been registered!";
+          flash("You've been registered!");
       }
       catch(Exception $e){
-          echo "There was a problem registering";
-          echo "<pre?>", var_export($e,true)."</pre>";
+          flash("There was a problem registering");
+          flash(var_export($e,true));
       }
   }
 }
 ?>
+<?php require(__DIR__."/../../partials/flash.php"); ?>
