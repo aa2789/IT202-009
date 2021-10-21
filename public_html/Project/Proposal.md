@@ -1,9 +1,10 @@
-# Project Name: (Which Project)
-## Project Summary: (Copy from proposal)
-## Github Link: (Prod Branch of Project Folder)
+# Project Name: Simple Shop
+## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
+
+## Github Link: https://github.com/aa2789/IT202-009/tree/prod
 ## Project Board Link: 
 ## Website Link: (Heroku Prod of Project folder)
-## Your Name:
+## Your Name: Abhi Arun
 
 <!--
 ### Line item / Feature template (use this for each bullet point)
@@ -23,20 +24,88 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-    [] User will be able to register a new account
-          -Form Fields
-               -Username, email, password, confirm password (other fields optional)
-              - Email is required and must be validated
-              - Username is required
-              - Confirm password’s match
-           Users Table
-             -  Id, username, email, password (60 characters), created, modified
-         - Password must be hashed (plain text passwords will lose points)
-         - Email should be unique
-         - Username should be unique
-         - System should let user know if username or email is taken and allow the user to correct the error without wiping/clearing the form
-              - The only fields that may be cleared are the password fields
-
+  - [ ] (mm/dd/yyyy of completion)User will be able to register a new account
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion)User will be able to login to their account (given they enter the correct credentials)
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) User will be able to logout
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+   - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show                  
+  - [ ] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
+     -  List of Evidence of Feature Completion
+       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Pull Requests
+         - PR link #1 (repeat as necessary)
+       - Screenshots
+         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+           - Screenshot #1 description explaining what you're trying to show
+                               
 - Milestone 2
 - Milestone 3
 - Milestone 4
