@@ -45,7 +45,6 @@ function is_logged_in($redirect = false, $destination = "login.php")
     }
     return $isLoggedIn; //se($_SESSION, "user", false, false);
 }
-
 function has_role($role)
 {
     if (is_logged_in() && isset($_SESSION["user"]["roles"])) {
@@ -120,4 +119,14 @@ function users_check_duplicate($errorInfo)
         //TODO come up with a nice error message
         flash("<pre>" . var_export($errorInfo, true) . "</pre>");
     }
+}
+function get_url($dest)
+{
+    global $BASE_PATH;
+    if (str_starts_with($dest, "/")) {
+        //handle absolute path
+        return $dest;
+    }
+    //handle relative path
+    return $BASE_PATH . $dest;
 }
