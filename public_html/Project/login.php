@@ -82,6 +82,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                         }
                         die(header("Location: home.php"));
                     } else {
+                        
                         flash("Invalid password", "danger");
                     }
                 } else {
