@@ -41,16 +41,29 @@
          - PR link #1 (repeat as necessary)
        - Screenshots
          - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+           - User can login with email or username 
+         - ![image](https://user-images.githubusercontent.com/71272971/140596887-407db7ec-0e14-463d-9b42-55c3c821fe6e.png)
+           - Password Required
+         - ![image](https://user-images.githubusercontent.com/71272971/140596918-318f5313-a88e-4ba9-8c62-8d31e90f86f6.png)
+           - User should see friendly error messages when an account either doesn’t exist
+         - ![image](https://user-images.githubusercontent.com/71272971/140596957-ae3bd177-07bc-4028-b479-ccd8d274ced1.png)
+           - User should see friendly error messages if passwords don’t match
+         - ![image](https://user-images.githubusercontent.com/71272971/140597039-05b6ca3c-ab2a-47b8-916c-2b78071ad34d.png)
+           - Logging in should fetch the user’s details (and roles) and save them into the session.
+         - ![image](https://user-images.githubusercontent.com/71272971/140597201-7a45fe7b-3e0a-4862-9948-b124665c60ce.png)
+           - User sees all their roles when they login.
+         - Code Snippet from login.php= die(header("Location: home.php"));
+           - User will be directed to a landing page upon login
   - [ ] (mm/dd/yyyy of completion) User will be able to logout
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/7/files
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140596177-daf48a18-0e74-4828-8d99-dc9b0c88d124.png)
+           - User will be redirected to login page after logging out as a result of using the header() function and session is destroyed using the reset_session() function.
+         -
   - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -60,15 +73,21 @@
        - Screenshots
          - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
            - Screenshot #1 description explaining what you're trying to show
-   - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
+   - [x] (10/26/2021) Basic Roles implemented
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Status: Completeted
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/22
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show                  
+         - ![image](https://user-images.githubusercontent.com/71272971/140593446-87292bb3-2de6-41f4-a5ee-d3c5eb2fa1c6.png)
+            - Have a Roles Table
+         - ![image](https://user-images.githubusercontent.com/71272971/140593475-db01ef5e-70aa-4c42-9fcf-4551ac2cb812.png)
+            - Have a User Roles Table
+         - ![image](https://user-images.githubusercontent.com/71272971/140593523-acdef55e-125d-472c-a906-44e30a3bcb62.png)
+            - Include a function to check if a user has a specific role
+         
+                 
   - [ ] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -89,13 +108,13 @@
            - Screenshot #1 description explaining what you're trying to show
   - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Status: Completed
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/21
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140597356-3dba7bcc-3660-4c47-bd1d-54aac1abfbdc.png)
+           - User can see profile
   - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
