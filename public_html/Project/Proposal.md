@@ -31,8 +31,19 @@
        - Pull Requests
          - PR link #1 (repeat as necessary)
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140653197-be59b4d1-c6a4-4c3e-952c-5c79e528e459.png)
+           - Has form fields of Username, email, password, confirm password 
+         - ![image](https://user-images.githubusercontent.com/71272971/140653280-ec7e9086-e66c-4aba-abbf-6708718dd940.png)
+           - Email is required
+         - ![image](https://user-images.githubusercontent.com/71272971/140653327-9c7a6218-0ffb-4965-b124-dd4c877f11ff.png)
+           - Username is required
+         - ![image](https://user-images.githubusercontent.com/71272971/140654437-2893b136-9730-4eb1-8c43-e40b5dd02691.png)
+           - Passwords must match
+         - ![image](https://user-images.githubusercontent.com/71272971/140654564-64ba7c66-a842-4712-93cc-4addf490158d.png)
+           - Users Table/Shows that passwords are hashed
+         - ![image](https://user-images.githubusercontent.com/71272971/140655523-3032c808-dce7-48e5-a062-13818a52812a.png)
+           - User can successfully register
+         
   - [ ] (mm/dd/yyyy of completion)User will be able to login to their account (given they enter the correct credentials)
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -71,8 +82,8 @@
        - Pull Requests
          - PR link #1 (repeat as necessary)
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140655286-d1978c10-1a46-466f-be27-b9950c758057.png)
+           - Function to check if user is logged in
    - [x] (10/26/2021) Basic Roles implemented
      -  List of Evidence of Feature Completion
        - Status: Completeted
@@ -88,15 +99,15 @@
             - Include a function to check if a user has a specific role
          
                  
-  - [ ] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+  - [x] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Status: Completed
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
          - PR link #1 (repeat as necessary)
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140658492-b52e129c-4c27-42c2-9c76-358379b050ee.png)
+           - Basic styles/themes were applied on the input of the forms, the navigation bar, body of the site, etc. 
   - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
      -  List of Evidence of Feature Completion
        - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -115,15 +126,19 @@
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140597356-3dba7bcc-3660-4c47-bd1d-54aac1abfbdc.png)
            - User can see profile
-  - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
+  - [x] (mm/dd/yyyy of completion) User will be able to edit their profile
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Status: Completed
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
          - PR link #1 (repeat as necessary)
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/140656114-65d7c188-4298-47f8-8c8c-f91589ecfea8.png)
+           - Changing username/email should properly check to see if it’s available before allowing the change
+         - ![image](https://user-images.githubusercontent.com/71272971/140656254-788825f7-b064-4ca6-b56f-2dfb9c5530db.png)
+           - Other fields should be properly validated
+         - ![image](https://user-images.githubusercontent.com/71272971/140656276-f6896a0c-c490-4e9c-9348-97c99c46744d.png)
+           - Allow password reset
                                
 - Milestone 2
 - Milestone 3
