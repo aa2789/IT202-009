@@ -17,6 +17,7 @@
 
 
 
+
 #turn error reporting on
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -111,4 +112,6 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
     exit("Something went wrong");
+
 }
+
