@@ -16,6 +16,8 @@
 # This ensures the files always run in the precise order required (order of execution is extremely important)
 
 
+
+
 #turn error reporting on
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -110,4 +112,6 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
     exit("Something went wrong");
+
 }
+
