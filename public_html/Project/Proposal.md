@@ -121,8 +121,12 @@
        - Pull Requests
          - https://github.com/aa2789/IT202-009/pull/10
        - Screenshots
-         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-           - Screenshot #1 description explaining what you're trying to show
+         - ![image](https://user-images.githubusercontent.com/71272971/141194181-b8b36f54-a726-477e-bd96-38065bd8ff4f.png)
+           - Outputs message if username is not given
+         - ![image](https://user-images.githubusercontent.com/71272971/141194383-8bf3f53f-c0ae-45f3-8faf-1def4bf3fbf8.png)
+           - Outputs message if username is not given in assignroles.php
+         - ![image](https://user-images.githubusercontent.com/71272971/141195138-f3d911d6-4f6f-4a97-aa89-122bf26e4de5.png)
+           - Outputs message if invalid username is given in registration.
   - [x] (10/25/2021) User will be able to see their profile
      -  List of Evidence of Feature Completion
        - Status: Completed
