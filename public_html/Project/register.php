@@ -1,15 +1,17 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 reset_session();
+$email=se($_POST,"email","",false);
+$username=se($_POST,"username","",false);
 ?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" required />
+        <input value="<?php echo $email;?>" type="email" name="email" required />
     </div>
     <div>
         <label for="username">Username</label>
-        <input type="text" name="username" required maxlength="30" />
+        <input value="<?php echo $username;?>" type="text" name="username" required maxlength="30" />
     </div>
     <div>
         <label for="pw">Password</label>
@@ -25,8 +27,19 @@ reset_session();
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
+        if(form.email.value==""){
+            flash("Please enter a valid address", "warning");
+            return false;
+            
+        }
+        if(form.pw.value==""||form.pw.value.length<8){
+            flash("Please enter a valid password","warning");
+            return false;
+        }
 
         return true;
+       //  flash("hello",warning);
+        
     }
 </script>
 <?php

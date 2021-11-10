@@ -16,12 +16,14 @@ require(__DIR__ . "/../../partials/nav.php");
     function validate(form) {
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
-        if(form.email.value==""||email.indexOf("@")===-1||form.email.length<3){
-            alert("Please enter a valid address");
+        
+        if(form.email.value==""){
+            flash("Please enter a valid address", "warning");
             return false;
+            
         }
-        if(form.pw.value=""||form.pw.length<8){
-            alert("Please enter a valid password");
+        if(form.pw.value==""||form.pw.value.length<8){
+            flash("Please enter a valid password","warning");
             return false;
         }
 
@@ -31,6 +33,7 @@ require(__DIR__ . "/../../partials/nav.php");
 <?php
 
 //TODO 2: add PHP Code
+
 if (isset($_POST["email"]) && isset($_POST["password"])) {
     $email = se($_POST, "email", "", false);
     $password = se($_POST, "password", "", false);
