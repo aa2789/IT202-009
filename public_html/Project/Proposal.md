@@ -2,8 +2,8 @@
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
 
 ## Github Link: https://github.com/aa2789/IT202-009/tree/prod
-## Project Board Link: 
-## Website Link: https://aa2789-prod.herokuapp.com/
+## Project Board Link: https://github.com/aa2789/IT202-009/projects/1
+## Website Link: https://aa2789-prod.herokuapp.com/Project
 ## Your Name: Abhi Arun
 
 <!--
@@ -24,12 +24,12 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-  - [ ] (mm/dd/yyyy of completion)User will be able to register a new account
+  - [x] (10/07/2021)User will be able to register a new account
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Status: Completed
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/register.php
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/7
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140653197-be59b4d1-c6a4-4c3e-952c-5c79e528e459.png)
            - Has form fields of Username, email, password, confirm password 
@@ -45,12 +45,13 @@
            - User can successfully register
            
          
-  - [ ] (mm/dd/yyyy of completion)User will be able to login to their account (given they enter the correct credentials)
+  - [x] (11/10/2021)User will be able to login to their account (given they enter the correct credentials)
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Status: Completed
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/login.php
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/7
+         - https://github.com/aa2789/IT202-009/pull/25 ( feature added to login with username as well)
        - Screenshots
          - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
            - User can login with email or username 
@@ -66,12 +67,13 @@
            - User sees all their roles when they login.
          - Code Snippet from login.php= die(header("Location: home.php"));
            - User will be directed to a landing page upon login
-  - [x] (mm/dd/yyyy of completion) User will be able to logout
+  - [x] (11/10/2021) User will be able to logout
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Status:Completed
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/logout.php
        - Pull Requests
          - https://github.com/aa2789/IT202-009/pull/7/files
+         - https://github.com/aa2789/IT202-009/pull/25 (to see message that they've succesfully logged out)
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140596177-daf48a18-0e74-4828-8d99-dc9b0c88d124.png)
            - User will be redirected to login page after logging out as a result of using the header() function and session is destroyed using the reset_session() function.
@@ -79,19 +81,19 @@
            - User should see a message that they’ve successfully logged out
          - ![image](https://user-images.githubusercontent.com/71272971/140967627-e0cacabd-b47f-4fa5-937c-90705892b39c.png)
            - Session should be destroyed 
-  - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
+  - [x] (10/25/2021) Basic security rules implemented
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
+       - Status: Completed
        - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/21
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140655286-d1978c10-1a46-466f-be27-b9950c758057.png)
            - Function to check if user is logged in
    - [x] (10/26/2021) Basic Roles implemented
      -  List of Evidence of Feature Completion
        - Status: Completeted
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/admin/list_roles.php
        - Pull Requests
          - https://github.com/aa2789/IT202-009/pull/22
        - Screenshots
@@ -103,39 +105,39 @@
             - Include a function to check if a user has a specific role
          
                  
-  - [x] (mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+  - [x] (11/10/2021) Site should have basic styles/theme applied; everything should be styled
      -  List of Evidence of Feature Completion
        - Status: Completed
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/styles.css
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/25
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140658492-b52e129c-4c27-42c2-9c76-358379b050ee.png)
            - Basic styles/themes were applied on the input of the forms, the navigation bar, body of the site, etc. 
-  - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
+  - [x] (10/11/2021) Any output messages/errors should be “user friendly”
      -  List of Evidence of Feature Completion
-       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Status: Completed
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/10
        - Screenshots
          - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
            - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
+  - [x] (10/25/2021) User will be able to see their profile
      -  List of Evidence of Feature Completion
        - Status: Completed
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/profile.php
        - Pull Requests
          - https://github.com/aa2789/IT202-009/pull/21
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140597356-3dba7bcc-3660-4c47-bd1d-54aac1abfbdc.png)
            - User can see profile
-  - [x] (mm/dd/yyyy of completion) User will be able to edit their profile
+  - [x] (10/25/2021) User will be able to edit their profile
      -  List of Evidence of Feature Completion
        - Status: Completed
-       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+       - Direct Link: https://aa2789-prod.herokuapp.com/Project/profile.php
        - Pull Requests
-         - PR link #1 (repeat as necessary)
+         - https://github.com/aa2789/IT202-009/pull/21
        - Screenshots
          - ![image](https://user-images.githubusercontent.com/71272971/140656114-65d7c188-4298-47f8-8c8c-f91589ecfea8.png)
            - Changing username/email should properly check to see if it’s available before allowing the change
