@@ -57,10 +57,10 @@ if(isset($_POST["submit"])){
     <label for="name"> Stock </label><br>
     <input type="text" name="stock"><br>
     <label for="name"> Unit Price </label><br>
-    <input type="number" name="unitPrice"><br>
+    <input min="0" type="number" name="unitPrice"><br>
     <label for="name"> Visibility </label><br>
     <input min="0" max="1" type="number" name="visibility" value=1> <br>
-    <input type="submit" value="Add Role" name="submit"/>
+    <input type="submit" value="Add Item" name="submit"/>
 
 </form>
 <?php
