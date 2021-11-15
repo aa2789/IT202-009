@@ -49,17 +49,17 @@ if(isset($_POST["submit"])){
 <h1>Add Products to Inventory</h1>
 <form method="POST">  
     <label for="name"> Product Name: </label><br>
-    <input type="text" name="productName"><br>
-    <label for="name"> Description </label><br>
-    <textarea rows="5" cols="30" name="description"></textarea><br>
-    <label for="name"> Category</label><br>
-    <input type="text" name="category"><br>
-    <label for="name"> Stock </label><br>
-    <input type="text" name="stock"><br>
-    <label for="name"> Unit Price </label><br>
-    <input min="0" type="number" name="unitPrice"><br>
-    <label for="name"> Visibility </label><br>
-    <input min="0" max="1" type="number" name="visibility" value=1> <br>
+    <input id="name" type="text" name="productName" required><br>
+    <label for="desc"> Description </label><br>
+    <textarea id="desc" rows="5" cols="30" name="description" required></textarea><br>
+    <label for="cat"> Category</label><br>
+    <input id="cat" type="text" name="category" required><br>
+    <label for="stk"> Stock </label><br>
+    <input id="stk" type="text" name="stock" required><br>
+    <label for="price"> Unit Price </label><br>
+    <input id="price" min="0" type="number" name="unitPrice"><br>
+    <label for="vis"> Visibility </label><br>
+    <input id="vis" min="0" max="1" type="number" name="visibility" value=1> <br>
     <input type="submit" value="Add Item" name="submit"/>
 
 </form>
