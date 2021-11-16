@@ -31,7 +31,7 @@ if(isset($_POST["submit"])){
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Products (name, description, category, stock, unit_price, visibility) VALUES(:name, :description, :category, :stock,:unit_price,:visibility)");
         try {
-            $stmt->execute([":name" => $productName, ":description" => $description, ":category" => $category,":stock" => (int)$stock, ":unit_price" => (int)$unitPrice, ":visibility" => (bool)$visibility]);
+            $stmt->execute([":name" => $productName, ":description" => $description, ":category" => $category,":stock" => (int)$stock, ":unit_price" => (int)$unitPrice, ":visibility" => $visibility]);
             flash("Product Added to Inventory","success");
         } catch (Exception $e) {
             flash("There was a problem adding to the inventory","danger");
@@ -59,7 +59,7 @@ if(isset($_POST["submit"])){
     <label for="price"> Unit Price </label><br>
     <input id="price" min="0" type="number" name="unitPrice"><br>
     <label for="vis"> Visibility </label><br>
-    <input id="vis" min="0" max="1" type="number" name="visibility" value=1> <br>
+    <input id="vis" min="0" max="1" type="number" name="visibility"> <br>
     <input type="submit" value="Add Item" name="submit"/>
 
 </form>
