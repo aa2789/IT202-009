@@ -48,13 +48,13 @@ catch (PDOException $e) {
 <h2>Filter Products</h2>
 <form method="POST">
     <label for="Category"><b>Category</b> </label>
-    <input type="text" name="category">
+    <input id="Category" type="text" name="category">
     <br>
     <label for="product"><b>Product Name</b> </label>
-    <input type="text" name="product">
+    <input id="product" type="text" name="product">
     <br>
     <label for="price"><b>Sort by Price</b></label>
-    <input type="checkbox" name="price" value="yes">
+    <input id="price" type="checkbox" name="price" value="yes">
     <br>
     <input type="submit" value="filter" />
     <br>
@@ -62,7 +62,7 @@ catch (PDOException $e) {
 </form>
 <table>
     <thead>
-        <th>Product</th>
+        <th>Product List</th>
     </thead>
     <tbody>
         <?php if (empty($products)) : ?>
