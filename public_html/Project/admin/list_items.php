@@ -8,7 +8,7 @@ if (!(has_role("Admin")||has_role("Shop_Owner"))) {
 }
 ?>
 <?php
-$query="SELECT name from Products WHERE (visibility=1 OR visibility=0)";
+$query="SELECT id,name from Products WHERE (visibility=1 OR visibility=0)";
 $params=[];
 if(isset($_POST["category"])&&!empty($_POST["category"])){
     $cat=se($_POST,"category","",false);
@@ -77,6 +77,8 @@ catch (PDOException $e) {
                 <tr>
                     <td><?php se($product, "name"); ?></td>
                     <td>
+                    <a href="edit_items.php?id=<?php se($product, "id"); ?>">Edit</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

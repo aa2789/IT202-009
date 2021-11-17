@@ -5,7 +5,7 @@ require(__DIR__ . "/../../partials/nav.php");
 
 
 <?php 
-$query="SELECT name from Products WHERE visibility=1";
+$query="SELECT id,name from Products WHERE visibility=1";
 $params=[];
 if(isset($_POST["category"])&&!empty($_POST["category"])){
     $cat=se($_POST,"category","",false);
@@ -73,7 +73,10 @@ catch (PDOException $e) {
             <?php foreach ($products as $product) : ?>
                 <tr>
                     <td><?php se($product, "name"); ?></td>
-                    <td>
+                    <?php if(has_role("Admin")||has_role("Shop_Owner")) : ?>
+                         <td><a href="admin/edit_items.php?id=<?php se($product, "id"); ?>">Edit</a> </td>
+                    <?php endif;?>
+                    
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>
