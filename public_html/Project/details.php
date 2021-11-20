@@ -52,21 +52,7 @@ catch (PDOException $e) {
 
 <?php
 if(isset($_POST["submit"])){
-    /*$db = getDB();
-        $stmt = $db->prepare("INSERT INTO Products (name, description, category, stock, unit_price, visibility) VALUES(:name, :description, :category, :stock,:unit_price,:visibility)");
-        try {
-            $stmt->execute([":name" => $productName, ":description" => $description, ":category" => $category,":stock" => (int)$stock, ":unit_price" => (int)$unitPrice, ":visibility" => $visibility]);
-            flash("Product Added to Inventory","success");
-        } catch (Exception $e) {
-            flash("There was a problem adding to the inventory","danger");
-            flash("<pre>" . var_export($e, true) . "</pre>");
-            users_check_duplicate($e->errorInfo);
-        }
-
-    */
-    echo "Product Id: ", $_POST["product_id"],"<br>","User Id: ",
-    $_POST["user_id"],"<br>", "Desired Quantity:", $_POST["desired_quantity"],"<br>","Unit_Cost:",
-    $_POST["unit_cost"];
+ 
     $query="INSERT INTO Cart ( ";
     $ignore=["submit"];
     $arr=[];
@@ -85,8 +71,6 @@ if(isset($_POST["submit"])){
     $query.=") VALUES (";
     $query.=join(",",$arr2);
     $query.=")";
-    echo "<br>";
-    echo $query;
     $db=getDB();
     $stmt=$db->prepare($query);
     try{
