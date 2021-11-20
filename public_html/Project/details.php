@@ -39,6 +39,58 @@ catch (PDOException $e) {
 
 <?php endforeach;  ?>
 
+<?php if(is_logged_in()) : ?>
+     <form method="POST">
+     <label for="quantity"> Quantity: </label>
+     <input type="hidden" name="product_id" value=<?php se($_GET,"id"); ?> >
+     <input type="hidden" name="user_id" value=<?php se($_SESSION["user"], "id", "", true)?> >
+     <input required id="quantity" type="number" min="1" max=<?php se($column,"stock"); ?> name="desired_quantity">
+     <input type="hidden" name="unit_cost" value=<?php se($column,"unit_price");?> >
+     <input type="submit" name="submit" value="Add To Cart" >
+     </form> 
+<?php endif; ?>
+
+<?php
+if(isset($_POST["submit"])){
+ 
+    $query="INSERT INTO Cart ( ";
+    $ignore=["submit"];
+    $arr=[];
+    $arr2=[];
+    $params=[];
+    foreach($_POST as $column=>$value){
+        if(in_array($column,$ignore)){
+            continue;
+        }
+        array_push($arr,$column);
+        array_push($arr2,":$column");
+        $params+=[":$column"=>$value];
+
+    }
+    $query.=join(",",$arr);
+    $query.=") VALUES (";
+    $query.=join(",",$arr2);
+    $query.=")";
+    $db=getDB();
+    $stmt=$db->prepare($query);
+    try{
+        $stmt->execute($params);
+        flash("Added to Cart", "Success");
+        
+    }
+    catch(Exception $e){
+        flash("Item Already in Cart","danger");
+        flash("<pre>" . var_export($e, true) . "</pre>");
+
+
+    }
+
+}
+
+?>
+
+
+
 
 <?php
 require(__DIR__ . "/../../partials/flash.php");
