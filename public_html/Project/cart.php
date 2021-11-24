@@ -24,7 +24,10 @@ try {
 ?>
 
  
-<?php $subtotal=0;?>
+<?php $subtotal=0;
+ $productToIdMap=[];
+
+?>
 <?php if(count($products)==0): ?>
       <h2> No products Added to Cart</h2>
 <?php else:?>
@@ -33,7 +36,8 @@ try {
     <form  method="post">
         <table class="table">
             <tbody>   
-            <?php foreach($products as $index=>$arr): ?>  
+            <?php foreach($products as $index=>$arr): ?> 
+            <?php $productToIdMap[se($arr,"name","",false)]=se($arr,"id","",false); ?> 
             <?php if($index==0) :?>
                 <thead>
                     <tr>
@@ -54,7 +58,7 @@ try {
                         <?php if(in_array($col,$ignore))continue; ?>
                         <?php if($col=="desired_quantity"): ?>
                               <td>
-                                  <input type="number" name="desired_quantity[<?php $arr["name"] ?>]" value= <?php se($arr,$col);?> min=0 max=<?php se($arr,"stock"); ?> required>
+                                  <input type="number" name="desired_quantity[<?php se($arr,"name"); ?>]" value= <?php se($arr,$col);?> min=0 max=<?php se($arr,"stock"); ?> required>
                               </td>
                         <?php elseif($col=="name"): ?>
                             <td><a style="color:red;" href="details.php?id=<?php se($arr, "id"); ?>"><?php se($arr,$col); ?></a> </td>
@@ -64,7 +68,19 @@ try {
                         <td><?php se($arr,$col) ?></td>
                         <?php endif; ?>
                     <?php endforeach;?>
-                    <td><?php $x=number_format((se($arr,"unit_cost","",false)*se($arr,"desired_quantity","",false))/100,2); $subtotal+=$x; echo "$", $x;?></td>
+                   
+                    <td><?php
+                    $x=se($arr,"unit_cost","",false);
+                    
+                    $y=se($arr,"desired_quantity","",false);
+                    
+                    $z=($x*$y)/100;
+                    $subtotal+=$z;
+                    echo "$",number_format($z,2);
+                   ?>
+                     </td>
+                    <?php $location="removeFromCart.php?"; $location.="product_id=";$location.=se($arr,"id","",false); ?>
+                    <td><a href="<?php echo $location?> " class="button">Remove item</a> </td>
 
 
                 </tr>
@@ -74,7 +90,7 @@ try {
                         <?php if(in_array($col,$ignore))continue;?>
                         <?php if($col=="desired_quantity"):?>
                             <td>
-                                <input type="number" name="desired_quantitiy" value= <?php se($arr,$col);?> min=0 max=<?php se($arr,"stock"); ?> required>
+                                <input type="number" name="desired_quantity[<?php se($arr, "name"); ?>]" value= <?php se($arr,$col);?> min=0 max=<?php se($arr,"stock"); ?> required>
                              </td>  
                         <?php elseif($col=="name"):?>
                             <td><a style="color:red;" href="details.php?id=<?php se($arr, "id"); ?>"><?php se($arr,$col); ?> </a> </td>
@@ -84,7 +100,17 @@ try {
                         <td><?php se($arr,$col);?> </td>
                         <?php endif;?>
                     <?php endforeach; ?>
-                    <td><?php $x=number_format((se($arr,"unit_cost","",false)*se($arr,"desired_quantity","",false))/100,2); $subtotal+=$x; echo "$", $x;?></td>
+                    <td><?php
+                    
+                    $x=se($arr,"unit_cost","",false);
+                    $y=se($arr,"desired_quantity","",false);
+                    $z=($x*$y)/100;
+                    $subtotal+=$z;
+                    echo "$",number_format($z,2);
+                    ?>
+                     </td>
+                    <?php $location="removeFromCart.php?"; $location.="product_id=";$location.=se($arr,"id","",false); ?>
+                    <td><a href="<?php echo $location?> " class="button">Remove item</a> </td>
                 </tr>
         
             <?php endif;?>
@@ -100,11 +126,51 @@ try {
             <input type="submit" value="Place Order" name="placeorder">
         </div>
     </form>
+    <?php $location="removeFromCart.php?product_id=all";?>
+   <td><a href="<?php echo $location?> " class="button">Remove All Items</a> </td>
 </div>
 <?php endif;?>
 
+<?php 
+$flag=true;
+if(isset($_POST["update"])){
+    $id=get_user_id();
+    foreach($products as $product){
+        $query="";
+        $productID=se($product,"id","",false);
+        $quantity=se($product,"desired_quantity","",false);
+        $name=se($product,"name","",false);
+        $desiredQuantity=se($_POST["desired_quantity"],$name,"",false);
+        if($quantity!=$desiredQuantity){
+            if($desiredQuantity==0){
+                $query="DELETE FROM Cart WHERE user_id=$id AND product_id=$productID";
+            }
+            else{
+                $query="UPDATE Cart SET desired_quantity = $desiredQuantity WHERE user_id=$id AND product_id =$productID ";
+            }
+            $db=getDB();
+            $stmt=$db->prepare($query);
+            try {
+                $stmt->execute();
+                
+            } catch (PDOException $e) {
+                $flag=false;
+                flash(var_export($e->errorInfo, true), "danger");
+            }
+        }
+        
+    }
+    if($flag==true){
+        flash("Updated Successfully","success");
+    }
+}                
+
+?>
+
+<?php
 
 
+?>
 
 
 

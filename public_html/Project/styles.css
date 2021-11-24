@@ -4,3 +4,14 @@ body{
     color: rgb(0, 0, 0);
 
 }
+
+a.button {
+    background-color: #26862b; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
