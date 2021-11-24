@@ -72,13 +72,12 @@ catch (PDOException $e) {
         <?php else : ?>
             <?php foreach ($products as $product) : ?>
                 <tr>
-                    <td><?php se($product, "name"); ?></td>
+                   <td><a style="color:red;" href="details.php?id=<?php se($product, "id"); ?>"><?php se($product, "name"); ?></a> </td>
+                    
                     <?php if(has_role("Admin")||has_role("Shop_Owner")) : ?>
                          <td><a style="color:red;" href="admin/edit_items.php?id=<?php se($product, "id"); ?>">Edit</a> </td>
                     <?php endif;?>
-                    <tr>
-                    <td><a style="color:red;" href="details.php?id=<?php se($product, "id"); ?>">View Product Details</a> </td>
-                    <tr>
+                    
                     
                 </tr>
             <?php endforeach; ?>
