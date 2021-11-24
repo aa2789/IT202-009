@@ -223,34 +223,55 @@
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to change quantity of items in their cart
+  - [x] (11/24/2021) User will be able to change quantity of items in their cart
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/53
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to remove a single item from their cart vai button click
+        - ![image](https://user-images.githubusercontent.com/71272971/143262233-6f20aa4b-738a-4b52-9081-9b642512fdcf.png)
+          - There are initially three ipads
+        - ![image](https://user-images.githubusercontent.com/71272971/143262518-2faa531f-cb6f-4818-b492-2bbdacf97c99.png)
+          - picture of cart database
+        - ![image](https://user-images.githubusercontent.com/71272971/143262685-f0850a6d-e964-4b48-8ac7-64ccadc07f45.png)
+          - After update there are two
+        - ![image](https://user-images.githubusercontent.com/71272971/143262734-bc30960a-1a5b-4b2b-8d97-2d799c7a1c53.png)
+          - Picture of database
+         - ![image](https://user-images.githubusercontent.com/71272971/143263392-a391595e-c6f0-4dc6-8d35-1df988ebfddb.png)
+          - Code shows that if a user updates one of their items to a quantity of zero, then it removes the item.                                     
+  - [x] (11/24/21) User will be able to remove a single item from their cart vai button click
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/53
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to clear their entire cart via a button click
+        - ![image](https://user-images.githubusercontent.com/71272971/143267441-f2553419-b7a3-4085-8f85-6d723a38970a.png)
+          - Before deletion
+        - ![image](https://user-images.githubusercontent.com/71272971/143267637-bea92bea-0cbe-4793-9ab7-111580777383.png)
+          - After clicking button to remove the mini fridge
+        - ![image](https://user-images.githubusercontent.com/71272971/143264502-453623ab-1973-45f3-8ab8-117e04acb5b4.png)
+          - Code shows that product id is passed to removeFromCart.php after clicking the remove from cart button. 
+        - ![image](https://user-images.githubusercontent.com/71272971/143264627-d17422f5-5541-40c7-bbad-94d2439e634a.png)
+          - removeFromCart.php code                  
+  - [x] (11/24/21) User will be able to clear their entire cart via a button click
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/53
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-                                               
+        - ![image](https://user-images.githubusercontent.com/71272971/143267920-1a36bec4-7bfb-4172-8fe5-0041a8956540.png)
+          - Before clearing all
+        - ![image](https://user-images.githubusercontent.com/71272971/143268045-20e901a2-11ec-488c-b469-2000145f5eed.png)
+          - After clicking the remove all button 
+        - ![image](https://user-images.githubusercontent.com/71272971/143268210-a95bd1c5-5c60-4569-8e59-b7376b1e2895.png)
+          - All items for user with id 12 removed from the cart database.
+        - ![image](https://user-images.githubusercontent.com/71272971/143264939-c6422fc1-108b-4266-bfda-9ea1c87dff7f.png)
+          - Passes "all" to removeFromCart.php
+        - ![image](https://user-images.githubusercontent.com/71272971/143265810-1ec4bfe9-8647-424b-9f38-e2598a8d24ed.png)
+          - removeFromCart.php code                                                                       
 - Milestone 3
 - Milestone 4
 ### Intructions
