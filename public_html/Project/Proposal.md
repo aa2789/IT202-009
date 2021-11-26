@@ -151,78 +151,108 @@
            - Allow password reset
                                
 - Milestone 2
-  - [ ] (mm/dd/yyyy of completion) User with an admin role or shop owner role will be able to add products to inventory
+  - [x] (11/14/2021) User with an admin role or shop owner role will be able to add products to inventory
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/30
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show     
-  - [ ] (mm/dd/yyyy of completion) Any user will be able to see products with visibility = true on the Shop page
+        - ![image](https://user-images.githubusercontent.com/71272971/143536528-7eb8a3be-5287-4d2f-b91d-322b6f7084b9.png)
+          - user with an admin or shop owner role can add products to inventory.  
+        - ![image](https://user-images.githubusercontent.com/71272971/143536688-d47e8146-e03e-4c7e-98da-645594299df7.png)
+          - Table should be called Products (id, name, description, category, stock, created, modified, unit_price, visibility [true, false])       
+  - [x] (11/16/2021) Any user will be able to see products with visibility = true on the Shop page
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/42
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show     
-  - [ ] (mm/dd/yyyy of completion) Admin/Shop owner will be able to see products with any visibility
+        - ![image](https://user-images.githubusercontent.com/71272971/143535472-10140e64-7980-4946-9902-89b2ca73a8ae.png)
+          - User will be able to see the shop page without login and it lists the ten most recent items 
+        - ![image](https://user-images.githubusercontent.com/71272971/143535611-27c52c4b-06b5-4d86-ae52-35868b11c186.png)
+          - User will be able to filter results by category(Category used in picture was Technology)
+        - ![image](https://user-images.githubusercontent.com/71272971/143535934-4cc845f8-a15a-4b7e-898c-300e7410c51c.png)
+          - Code shows that user will be able to filter results by partial matches on name
+        - ![image](https://user-images.githubusercontent.com/71272971/143536237-b593d489-fe09-4fb7-9ac5-989e262402a4.png)
+          - Code shows that user can sort results by price.                                     
+  - [x] (11/16/2021) Admin/Shop owner will be able to see products with any visibility
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/43
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show         
-  - [ ] (mm/dd/yyyy of completion) Admin/Shop owner will be able to edit any product
+        - ![image](https://user-images.githubusercontent.com/71272971/143532704-10c01798-9a1b-4f0a-97fe-7950cfab6344.png)
+          - Admin/Shop owner will be able to see products with any visibility   
+        - ![image](https://user-images.githubusercontent.com/71272971/143532846-ad16c6bb-c6c0-40ec-b9ba-76aa3ad1f89d.png)
+          - image of database proving admins/shop owners can see all items despite the visibility.(basketball is set to visibility false)
+        - ![image](https://user-images.githubusercontent.com/71272971/143533236-e481a9bb-9632-4046-ad4c-f022f60d8e16.png)
+          - This page should only be accessible to the appropriate role(s)         
+                           
+  - [x] (11/18/2021) Admin/Shop owner will be able to edit any product
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Pending (Completed)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/44
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show         
-  - [ ] (mm/dd/yyyy of completion) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
+        - ![image](https://user-images.githubusercontent.com/71272971/143531927-2a6917a8-a1a5-406e-b829-87ae04664287.png)
+          - Image of database before update    
+        - ![image](https://user-images.githubusercontent.com/71272971/143532000-f12d34f0-9718-489f-8e3f-5739044bbeef.png)
+          - update stock for basketball   
+        - ![image](https://user-images.githubusercontent.com/71272971/143532073-1472cfa3-d6cf-46e0-8e4c-a19602f86435.png)
+          - After update
+        - ![image](https://user-images.githubusercontent.com/71272971/143532132-128e1472-2dc9-4337-9695-90a3c1b1cf9a.png)
+          - Edit button shown in product list for admins.
+       
+                                               
+  - [x] (11/19/2021) User will be able to click an item from a list and view a full page with more info about the item (Product Details Page)
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status:Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/50
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User must be logged in for any Cart related activity below
+        - ![image](https://user-images.githubusercontent.com/71272971/143527655-725d82ca-7536-45f0-ab1b-7b2be347554c.png)
+          - User can click an item from the product list
+        - ![image](https://user-images.githubusercontent.com/71272971/143528785-668fdaf2-660e-4b50-901b-54a5a29c3018.png)
+          - user can view a full page with more info about the item
+  - [x] (11/20/2021) User must be logged in for any Cart related activity below
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/51
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) User will be able to add items to Cart
+        -![image](https://user-images.githubusercontent.com/71272971/143527130-b8dbac8d-64f7-42aa-9011-88cfbc00590d.png)
+          - User can't add to cart unless logged in
+        -![image](https://user-images.githubusercontent.com/71272971/143527258-ffb838e8-d241-4fad-9fc1-306a5366a088.png)
+          - cart.php doesn't appear in nav bar unless a user is logged into their account. 
+  - [x] (11/20/2021 of completion) User will be able to add items to Cart
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/51
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show         
-  - [ ] (mm/dd/yyyy of completion) User will be able to see their cart
+        - ![image](https://user-images.githubusercontent.com/71272971/143525668-2494f9bb-ac67-4f6e-b3de-6e50db9ef7fe.png)
+          - user will be able to add items to thir cart. 
+        - ![image](https://user-images.githubusercontent.com/71272971/143525786-907a1636-dc72-49e6-bd8d-f133b9ca388d.png)
+          - Cart will be table-based (id, product_id, user_id, desired_quantity, unit_cost, created, modified)      
+        - ![image](https://user-images.githubusercontent.com/71272971/143526066-a42cf540-255f-4fef-91dc-60b8eda38059.png)
+          - Code shows that adding items to the cart doesn't change the quantity of the product. 
+                            
+  - [x] (11/20/2021) User will be able to see their cart
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: 
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/52
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/143523379-fb190493-aebf-4bd5-9aee-f959252e2a3f.png)
+          - Shows that the user can see all items, shows subtotal for each item, shows total cart value, and the product names are clickable links which redirect to details.php
   - [x] (11/24/2021) User will be able to change quantity of items in their cart
     -  List of Evidence of Feature Completion
       - Status: Completed
