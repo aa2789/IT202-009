@@ -123,7 +123,9 @@ try {
         </div>
         <div class="buttons">
             <input type="submit" value="Update" name="update">
-            <input type="submit" value="Place Order" name="placeorder">
+            <?php $loc="purchase.php?id=$id";?>
+            <td><a href="<?php echo $loc?> " class="button">Purchase Items</a> </td>
+            
         </div>
     </form>
     <?php $location="removeFromCart.php?product_id=all";?>
