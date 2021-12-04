@@ -321,16 +321,24 @@
         - ![image](https://user-images.githubusercontent.com/71272971/144643042-de5f341a-da3f-40fd-9e68-de3e6d010799.png)
           - Create an order items table  
         - ![image](https://user-images.githubusercontent.com/71272971/144648989-3b312063-893e-4028-a1b3-a4e76be199b2.png)
-          - Code for making an entry into the orders table.                            
-  - [ ] (mm/dd/yyyy of completion) Order Confirmation Page
+          - Code for making an entry into the orders table.   
+        - ![image](https://user-images.githubusercontent.com/71272971/144723351-ad747004-afb9-4570-84d3-4dee55d3a7cc.png)
+          - Code for getting the last order id from the orders table.   
+        - ![image](https://user-images.githubusercontent.com/71272971/144723393-66019ef2-69e4-433d-b4b6-cf800891a48a.png)
+          - Code for copying the cart details into the OrderItems tables with the Order ID from the previous step.
+        - ![image](https://user-images.githubusercontent.com/71272971/144723459-b7a1c3ab-af80-4a7c-a572-acc3b90f29c1.png)
+          - Code for updating the stock. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144723489-4a795ffb-8072-45ad-a52e-7fb8a06ad43c.png)
+          - User's cart is cleared and they are directed to the order confirmation page if the order is successful.                                                                 
+  - [x] (12/03/2021) Order Confirmation Page
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/56
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show     
+        - ![orderConfirm](https://user-images.githubusercontent.com/71272971/144723577-fe273770-5f60-4b6d-97e1-bd78baf8f9c2.jpg)
+          - Show the entire order details from the Order and OrderItems table  and displays a Thank You message.    
   - [ ] (mm/dd/yyyy of completion)User will be able to see their Purchase History
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
