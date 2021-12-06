@@ -1,11 +1,11 @@
 <?php
-require(__DIR__ . "/../../partials/nav.php");
+require(__DIR__ . "/../../../partials/nav.php");
 ?>
 <?php  
 
 $id=get_user_id();
 $counter=1;
-$query="SELECT * FROM Orders WHERE user_id =$id ORDER BY id DESC LIMIT 10";
+$query="SELECT * FROM Orders ORDER BY id DESC LIMIT 10";
 $orders=[];
 $db=getDB();
 $stmt=$db->prepare($query);
@@ -43,7 +43,7 @@ try {
         <td><?php echo "$",number_format($price/100,2) ?></td>
         <td><?php echo $address ?> </td>
         <td> <?php echo $payment ?> </td>
-        <td><a style="color:red;" href="purchaseDetails.php?id=<?php se($order, "id"); ?>"> View Details</a> </td>
+        <td><a style="color:red;" href="../purchaseDetails.php?id=<?php se($order, "id"); ?>"> View Details</a> </td>
 
     </tr>
    <?php else: ?>
@@ -52,7 +52,7 @@ try {
         <td><?php echo "$",number_format($price/100,2) ?></td>
         <td><?php echo $address ?> </td>
         <td> <?php echo $payment ?> </td>
-        <td><a style="color:red;" href="purchaseDetails.php?id=<?php se($order, "id"); ?>"> View Details</a> </td>
+        <td><a style="color:red;" href="../purchaseDetails.php?id=<?php se($order, "id"); ?>"> View Details</a> </td>
     </tr>
     <?php endif; ?>
 <?php endforeach; ?>
@@ -62,5 +62,6 @@ try {
 
 
 <?php
-require(__DIR__ . "/../../partials/flash.php");
+//note we need to go up 1 more directory
+require_once(__DIR__ . "/../../../partials/flash.php");
 ?>
