@@ -339,25 +339,32 @@
       - Screenshots
         - ![orderConfirm](https://user-images.githubusercontent.com/71272971/144723577-fe273770-5f60-4b6d-97e1-bd78baf8f9c2.jpg)
           - Show the entire order details from the Order and OrderItems table  and displays a Thank You message.    
-  - [ ] (mm/dd/yyyy of completion)User will be able to see their Purchase History
+  - [x] (12/05/2021)User will be able to see their Purchase History
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/57
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show         
-  - [ ] (mm/dd/yyyy of completion) Store Owner will be able to see all Purchase History
+        - ![image](https://user-images.githubusercontent.com/71272971/144891196-2023623f-6a17-4df9-817e-95a95bc7fba0.png)
+          - Image of the Orders table. I will be showing the purchase history for the user with user_id 12. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144891367-4820a216-4d16-48aa-9134-0b1182481f3a.png)
+          - Shows that the user can see their 10 most recent orders. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144891827-b4ad5f23-7839-4f6a-b465-680b79ebd661.png)
+          - Shows image of order details after clicking the 'view details' of the first order.          
+  - [x] (12/06/2021) Store Owner will be able to see all Purchase History
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/58
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show         
-  
+        - ![image](https://user-images.githubusercontent.com/71272971/144892366-1894fc8e-4990-4c92-b821-aff4d5afb08f.png)
+          - Image of the Orders table.       
+        - ![image](https://user-images.githubusercontent.com/71272971/144892499-605c33ef-aaf9-4104-81b3-f31de493e9f8.png)
+          - Image showing that admins can see the ten recent purchase history for all users. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144892727-8f7001ee-416e-4da4-a5ac-ea1a77ed56a7.png)
+          - A list item can be clicked to view the full details in the Order Details Page.             
 - Milestone 4
 ### Intructions
 #### Don't delete this
