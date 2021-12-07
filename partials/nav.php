@@ -41,11 +41,13 @@ require_once(__DIR__ . "/../lib/functions.php");
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('cart.php'); ?>">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('purchaseHistory.php'); ?>">Purchase History</a></li>
                 <?php endif; ?>
                 <?php if (!is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('login.php'); ?>">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('register.php'); ?>">Register</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
+                    
                     
                 <?php endif; ?>
                 <?php if (has_role("Admin")||has_role("Shop_Owner")) : ?>
@@ -59,7 +61,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/add_items.php'); ?>">Add Products</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/list_items.php'); ?>">List Products</a></li>
-                            
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/admin_history.php'); ?>">Purchase History</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
