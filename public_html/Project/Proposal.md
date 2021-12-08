@@ -303,6 +303,66 @@
         - ![image](https://user-images.githubusercontent.com/71272971/143265810-1ec4bfe9-8647-424b-9f38-e2598a8d24ed.png)
           - removeFromCart.php code
 - Milestone 3
+  - [x] (12/03/2021) User will be able to purchase items in their Cart
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/cart.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/56
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/144642764-cf527370-8449-4d19-936b-fc71e57ec8d4.png)
+          - Create an orders table   
+        - ![image](https://user-images.githubusercontent.com/71272971/144643042-de5f341a-da3f-40fd-9e68-de3e6d010799.png)
+          - Create an order items table
+        - ![image](https://user-images.githubusercontent.com/71272971/144643588-dd8505bd-9d46-4ee3-be20-e4dd64375870.png)
+          - Checkout Form  
+        - ![image](https://user-images.githubusercontent.com/71272971/144644181-281c1a7e-ae84-46b4-90fa-18172bc2784a.png)
+          - This image shows how the user can't have more than what is in stock in the cart and therefore can not purchase that many items. For the desired quantity input field, I put the min attribute as 1 and the max attribute as the stock so that the user can only enter a number within those bounds.  
+        - ![image](https://user-images.githubusercontent.com/71272971/144648989-3b312063-893e-4028-a1b3-a4e76be199b2.png)
+          - Code for making an entry into the orders table.   
+        - ![image](https://user-images.githubusercontent.com/71272971/144723351-ad747004-afb9-4570-84d3-4dee55d3a7cc.png)
+          - Code for getting the last order id from the orders table.   
+        - ![image](https://user-images.githubusercontent.com/71272971/144723393-66019ef2-69e4-433d-b4b6-cf800891a48a.png)
+          - Code for copying the cart details into the OrderItems tables with the Order ID from the previous step.
+        - ![image](https://user-images.githubusercontent.com/71272971/144723459-b7a1c3ab-af80-4a7c-a572-acc3b90f29c1.png)
+          - Code for updating the stock. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144723489-4a795ffb-8072-45ad-a52e-7fb8a06ad43c.png)
+          - User's cart is cleared and they are directed to the order confirmation page if the order is successful.                                                                 
+  - [x] (12/03/2021) Order Confirmation Page
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/purchase.php?id=38
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/56
+      - Screenshots
+        - ![orderConfirm](https://user-images.githubusercontent.com/71272971/144723577-fe273770-5f60-4b6d-97e1-bd78baf8f9c2.jpg)
+          - Show the entire order details from the Order and OrderItems table  and displays a Thank You message.    
+  - [x] (12/05/2021)User will be able to see their Purchase History
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/purchaseHistory.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/57
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/144891196-2023623f-6a17-4df9-817e-95a95bc7fba0.png)
+          - Image of the Orders table. I will be showing the purchase history for the user with user_id 12. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144891367-4820a216-4d16-48aa-9134-0b1182481f3a.png)
+          - Shows that the user can see their 10 most recent orders. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144891827-b4ad5f23-7839-4f6a-b465-680b79ebd661.png)
+          - Shows image of order details after clicking the 'view details' of the first order.          
+  - [x] (12/06/2021) Store Owner will be able to see all Purchase History
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/admin/admin_history.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/58
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/144892366-1894fc8e-4990-4c92-b821-aff4d5afb08f.png)
+          - Image of the Orders table.       
+        - ![image](https://user-images.githubusercontent.com/71272971/144892499-605c33ef-aaf9-4104-81b3-f31de493e9f8.png)
+          - Image showing that admins can see the ten recent purchase history for all users. 
+        - ![image](https://user-images.githubusercontent.com/71272971/144892727-8f7001ee-416e-4da4-a5ac-ea1a77ed56a7.png)
+          - A list item can be clicked to view the full details in the Order Details Page.
 - Milestone 4
 ### Intructions
 #### Don't delete this
