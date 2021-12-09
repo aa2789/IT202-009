@@ -65,6 +65,40 @@ if (isset($_POST["save"])) {
             flash("New passwords don't match", "warning");
         }
     }
+    $user_id=get_user_id();
+    if(isset($_POST["visibile"])&&isset($_POST["invisibile"])){
+        flash("You can only choose one profile visibility","warning");
+    }
+    if(isset($_POST["visibile"])){
+        $query="UPDATE Users SET visibility =1 WHERE id=$user_id";
+        $db=getDB();
+        $stmt=$db->prepare($query);
+        try{
+            $stmt->execute();
+            flash("Updated Visibility","success");
+        
+        }
+        catch( PDOException $e){
+            flash(var_export($e->errorInfo, true), "danger");
+        
+        }
+
+    }
+    else if(isset($_POST["invisibile"])){
+        $query="UPDATE Users SET visibility =0 WHERE id=$user_id";
+        $db=getDB();
+        $stmt=$db->prepare($query);
+        try{
+            $stmt->execute();
+            flash("Updated Visibility","success");
+        
+        }
+        catch( PDOException $e){
+            flash(var_export($e->errorInfo, true), "danger");
+        
+        }
+
+    }
 }
 ?>
 
@@ -95,6 +129,11 @@ $username = get_username();
         <label for="conp">Confirm Password</label>
         <input type="password" name="confirmPassword" id="conp" />
     </div>
+    <label for="vis"><b>Make Profile Public </b></label>
+    <input id="vis" type="checkbox" name="visibile" value="yes">
+    <label for="invis"><b>Make Profile private </b></label>
+    <input id="invis" type="checkbox" name="invisibile" value="yes">
+    <br>
     <input type="submit" value="Update Profile" name="save" />
 </form>
 
