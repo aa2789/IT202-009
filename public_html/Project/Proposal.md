@@ -364,15 +364,17 @@
         - ![image](https://user-images.githubusercontent.com/71272971/144892727-8f7001ee-416e-4da4-a5ac-ea1a77ed56a7.png)
           - A list item can be clicked to view the full details in the Order Details Page.
 - Milestone 4
-  - [ ] (mm/dd/yyyy of completion)User can set their profile to be public or private
+  - [x] (12/09/2021)User can set their profile to be public or private
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/70
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/145447569-86751bf1-1dee-4b21-8e26-efddf8876272.png))
+          - User can choose whether they want to make their profile public or private. If both checkboxes are selected, then an error is given. 
+        - ![image](https://user-images.githubusercontent.com/71272971/145447838-54455374-a937-4ba3-8518-6224dd8e95a9.png)
+          - Code snippet for changing profile visibility.           
   - [ ] (mm/dd/yyyy of completion) User will be able to rate a product they purchased
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
