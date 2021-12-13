@@ -92,7 +92,8 @@ if(isset($_POST["submit"])){
 <h2> Product Ratings </h2>
 <?php $results_per_page=10;
       $ratings=[];
-      $query="SELECT * FROM Ratings";
+      $productID=se($_GET,"id","",false);
+      $query="SELECT * FROM Ratings WHERE product_id=$productID";
       $db=getDB();
       $stmt=$db->prepare($query);
       try{
@@ -115,7 +116,7 @@ if(isset($_POST["submit"])){
         $page=$_GET["page"];
     }
     $this_page_first_result=($page-1)*$results_per_page;
-    $query="SELECT * FROM Ratings LIMIT $this_page_first_result,$results_per_page";
+    $query="SELECT * FROM Ratings WHERE product_id=$productID LIMIT $this_page_first_result,$results_per_page";
     $db=getDB();
     $stmt=$db->prepare($query);
     try{
@@ -129,6 +130,7 @@ if(isset($_POST["submit"])){
   catch(Exception $e){
       flash("<pre>" . var_export($e, true) . "</pre>");
   }
+  if(count($ratings)>0){
   $averageRating=0;
   foreach($ratings as $rate){
       $r=se($rate,"rating","",false);
@@ -142,6 +144,7 @@ if(isset($_POST["submit"])){
         $loc="details.php?id=$productID&page=$page";
         echo "<a href=$loc>$page </a>";
     }
+}
 ?>
 
 
