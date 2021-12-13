@@ -89,6 +89,98 @@ if(isset($_POST["submit"])){
 
 ?>
 
+<h2> Product Ratings </h2>
+<?php $results_per_page=10;
+      $ratings=[];
+      $productID=se($_GET,"id","",false);
+      $query="SELECT * FROM Ratings WHERE product_id=$productID";
+      $db=getDB();
+      $stmt=$db->prepare($query);
+      try{
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if($results){
+            $ratings=$results;
+        }
+        
+    }
+    catch(Exception $e){
+        flash("<pre>" . var_export($e, true) . "</pre>");
+    }
+    $number_of_results= count($ratings);
+    $number_of_pages=ceil($number_of_results/$results_per_page);
+    if(!isset($_GET["page"])){
+        $page=1;
+    }
+    else{
+        $page=$_GET["page"];
+    }
+    $this_page_first_result=($page-1)*$results_per_page;
+    $query="SELECT * FROM Ratings WHERE product_id=$productID LIMIT $this_page_first_result,$results_per_page";
+    $db=getDB();
+    $stmt=$db->prepare($query);
+    try{
+      $stmt->execute();
+      $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      if($results){
+          $ratings=$results;
+      }
+      
+  }
+  catch(Exception $e){
+      flash("<pre>" . var_export($e, true) . "</pre>");
+  }
+  if(count($ratings)>0){
+  $averageRating=0;
+  foreach($ratings as $rate){
+      $r=se($rate,"rating","",false);
+      $c=se($rate,"comment","",false);
+      $averageRating+=$r;
+      echo "rating: ",$r, "    ","comment: ",$c,"<br>";
+  }
+  echo "Average Rating: ",number_format(($averageRating/count($ratings)),2),"<br>";
+    for($page=1;$page<=$number_of_pages;$page++){
+        $productID=se($_GET,"id","",false);
+        $loc="details.php?id=$productID&page=$page";
+        echo "<a href=$loc>$page </a>";
+    }
+}
+?>
+
+
+
+<h2>Rate Product</h2>
+<form method="POST">  
+    <label for="rating"> Rating </label><br>
+    <input id="rating" min="1" max="5" type="number" name="rating" ><br>
+    <label for="comment"> Comment </label><br>
+    <textarea id="comment" rows="5" cols="30" name="comment" required> </textarea><br>
+    <input type="submit" value="Submit Rating" name="submitRating"/>
+
+</form>
+
+<?php 
+if(isset($_POST["submitRating"])){
+    $productID=$_GET["id"];
+    $userID=get_user_id();
+    $rating=se($_POST,"rating","",false);
+    $comment=se($_POST,"comment","",false);
+    $query="INSERT INTO Ratings(product_id,user_id,rating,comment) VALUES (:product_id,:user_id,:rating,:comment)";
+    $db=getDB();
+    $stmt=$db->prepare($query);
+    try {
+        $stmt->execute([":product_id" => $productID, ":user_id" => $userID, ":rating" => $rating,":comment"=>$comment]);
+    } catch (Exception $e) {
+        flash("There was a problem adding the rating","danger");
+        flash("<pre>" . var_export($e, true) . "</pre>");
+        
+    }
+
+}
+
+
+?>
+ 
 
 
 
