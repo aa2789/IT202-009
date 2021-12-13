@@ -375,15 +375,17 @@
           - User can choose whether they want to make their profile public or private. If both checkboxes are selected, then an error is given. 
         - ![image](https://user-images.githubusercontent.com/71272971/145447838-54455374-a937-4ba3-8518-6224dd8e95a9.png)
           - Code snippet for changing profile visibility.           
-  - [ ] (mm/dd/yyyy of completion) User will be able to rate a product they purchased
+  - [x] (12/13/2021) User will be able to rate a product they purchased
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/71
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/145897267-439f4fac-0203-4c90-81b8-4d95d9a87bcf.png)
+          - Create table called Ratings
+        - ![image](https://user-images.githubusercontent.com/71272971/145897417-8324cb9f-5a0a-4439-b177-099789b61052.png)
+          - 1-5 Rating, Text comment,  must be done on the products details page, latest 10 Ratings and Rating Comments will be visible on the Product Details page,( pagination is kind of hard to see since theres currently less than 10 reviews so there is currently only one page clickable as a link in the bottom), shows the average rating.        
   - [ ] (mm/dd/yyyy of completion)User’s Purchase History Changes
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
