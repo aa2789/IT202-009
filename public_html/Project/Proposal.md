@@ -386,15 +386,25 @@
           - Create table called Ratings
         - ![image](https://user-images.githubusercontent.com/71272971/145897417-8324cb9f-5a0a-4439-b177-099789b61052.png)
           - 1-5 Rating, Text comment,  must be done on the products details page, latest 10 Ratings and Rating Comments will be visible on the Product Details page,( pagination is kind of hard to see since theres currently less than 10 reviews so there is currently only one page clickable as a link in the bottom), shows the average rating.        
-  - [ ] (mm/dd/yyyy of completion)User’s Purchase History Changes
+  - [x] (12/14/2021)User’s Purchase History Changes
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/72
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/146121223-91d19c40-13c2-4442-b501-2c4b1e520240.png)
+          - Orders Database
+        - ![image](https://user-images.githubusercontent.com/71272971/146121762-22cc105f-5fc1-4b07-aeea-fe1b7f6e1fb5.png)
+          - Shows the user's purchase history page before any filters are applied.            
+        - ![image](https://user-images.githubusercontent.com/71272971/146121538-90c2c5a8-4858-4b25-a71c-f3ccff8626cb.png)
+          - Shows the products the user purchased that fall in the date between 12/4/2021 and 12/6/2021. Filters purchase history by date range.        
+        - ![image](https://user-images.githubusercontent.com/71272971/146121687-604b895a-f073-43ed-83b6-df6784d4c017.png)
+          - Sort by cost of purchase in ascending order.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146122008-7484a884-b11c-4f60-ae4c-cb53440d567b.png)
+          - Sort by date purchased
+        - ![image](https://user-images.githubusercontent.com/71272971/146122105-37683d8f-2e04-4bc1-b7e8-41d82015ab21.png)
+          - Add pagination. User can move through pages that can hold 10 purchases each. Right now the user only has 2 purchases so there is only one page because the maximum results per page is 10. When I make the results per page equal to 1 then there are two pages with 1 product each, so it should work.                    
   - [ ] (mm/dd/yyyy of completion) Store Owner Purchase History Changes
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
