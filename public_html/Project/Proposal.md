@@ -405,15 +405,28 @@
           - Sort by date purchased
         - ![image](https://user-images.githubusercontent.com/71272971/146122105-37683d8f-2e04-4bc1-b7e8-41d82015ab21.png)
           - Add pagination. User can move through pages that can hold 10 purchases each. Right now the user only has 2 purchases so there is only one page because the maximum results per page is 10. When I make the results per page equal to 1 then there are two pages with 1 product each, so it should work.                    
-  - [ ] (mm/dd/yyyy of completion) Store Owner Purchase History Changes
+  - [x] (12/16/2021) Store Owner Purchase History Changes
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/73
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/146322336-d31836eb-c742-461c-b5a4-59e240e0e4b1.png)
+          - Orders database that shows the purchase history of all users.
+        - ![image](https://user-images.githubusercontent.com/71272971/146322947-834ef0bc-7358-4508-b8d6-17f08422c76a.png)
+          - This shows how the page looks like before any filters were applied.      
+        - ![image](https://user-images.githubusercontent.com/71272971/146323123-7e6159e8-4d31-4a47-a50d-19660d5f652a.png)
+          - Page after date range filter is applied between the dates of 12/2 and 12/3
+        - ![image](https://user-images.githubusercontent.com/71272971/146323228-2c32b79b-4b6b-4684-8649-ca9315a9bcca.png)
+          - Sort by cost of purchase in ascending order     
+        - ![image](https://user-images.githubusercontent.com/71272971/146323362-1bdc549c-202a-452c-876c-577ada1719ac.png)
+          - sort by date purchased in ascending order.    
+        - ![image](https://user-images.githubusercontent.com/71272971/146323456-ce4136de-e377-49b0-90eb-480d0627b090.png)
+          - This is how the second page of the orders history table looks like. The total results per page is 2 and there are only 3 order items so the second page only has one product right now. 
+        - ![image](https://user-images.githubusercontent.com/71272971/146323758-ed0f92fb-a612-4f66-a824-1700e76b409c.png)
+          - The result page should show the accurate total price of the combined search results. Shows that the combined total of two orders of $185 and $21 is $206.
+          
   - [ ] (mm/dd/yyyy of completion) Add pagination to Shop Page 
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
