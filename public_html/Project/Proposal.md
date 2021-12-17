@@ -427,15 +427,21 @@
         - ![image](https://user-images.githubusercontent.com/71272971/146323758-ed0f92fb-a612-4f66-a824-1700e76b409c.png)
           - The result page should show the accurate total price of the combined search results. Shows that the combined total of two orders of $185 and $21 is $206.
           
-  - [ ] (mm/dd/yyyy of completion) Add pagination to Shop Page 
+  - [x] (12/17/2021) Add pagination to Shop Page 
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status:Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/74
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/146496312-2a8855d9-17d9-4166-a5dc-bcd35285fd8d.png)
+          - Image of Products DB
+        - ![image](https://user-images.githubusercontent.com/71272971/146496449-bf6feb39-4b87-4c33-a07e-2bc8b8795c6e.png)
+          - Image of first page of the pagination.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146496511-16fc8955-6ecb-41ba-bc93-fce7ed8d0cc8.png)
+          - Image of the second page of the pagination.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146496556-a4a25806-0c4a-48c2-8b70-6b1a1925df0a.png)
+          - Image of the third page of the pagination.                        
   - [ ] (mm/dd/yyyy of completion)Store Owner will be able to see all products out of stock
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
