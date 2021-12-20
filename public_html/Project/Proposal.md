@@ -442,15 +442,22 @@
           - Image of the second page of the pagination.   
         - ![image](https://user-images.githubusercontent.com/71272971/146496556-a4a25806-0c4a-48c2-8b70-6b1a1925df0a.png)
           - Image of the third page of the pagination.                        
-  - [ ] (mm/dd/yyyy of completion)Store Owner will be able to see all products out of stock
+  - [x] (12/17/2021)Store Owner will be able to see all products out of stock
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/75
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/71272971/146501725-d1737545-54a4-4562-9dcd-9eedd61d1975.png)
+          - Products DB( mini fridge has 0 stock)
+        - ![image](https://user-images.githubusercontent.com/71272971/146502158-b12b9d14-d075-479b-a54e-9dbb413de158.png)
+          - Image of the shop page before any filters.            
+        - ![image](https://user-images.githubusercontent.com/71272971/146502097-2e951c92-7abe-4e33-b887-336d4c800757.png)
+          - Store owner will be able to see all items out of stock.
+        - ![image](https://user-images.githubusercontent.com/71272971/146502416-1e9cd564-4abf-4ca4-a8fd-499c42cb8a73.png)
+          - Shows that it accounts for pagination because there are no results if I filter by zero stock on a page that doesn't show the mini fridge item.             
+    
   - [ ] (mm/dd/yyyy of completion) User can sort products by average rating on the Shop Page
     -  List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
