@@ -5,6 +5,31 @@ require(__DIR__ . "/../../partials/nav.php");
 
 
 <?php 
+$results_per_page=2;
+$ratings=[];
+$query="SELECT * FROM Products WHERE visibility=1";
+$db=getDB();
+$stmt=$db->prepare($query);
+try{
+  $stmt->execute();
+  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  if($results){
+      $ratings=$results;
+  }
+  
+}
+catch(Exception $e){
+  flash("<pre>" . var_export($e, true) . "</pre>");
+}
+$number_of_results= count($ratings);
+$number_of_pages=ceil($number_of_results/$results_per_page);
+if(!isset($_GET["page"])){
+    $page=1;
+}
+else{
+    $page=$_GET["page"];
+}
+$this_page_first_result=($page-1)*$results_per_page;
 $query="SELECT id,name from Products WHERE visibility=1";
 $params=[];
 if(isset($_POST["category"])&&!empty($_POST["category"])){
@@ -18,11 +43,12 @@ if(isset($_POST["product"])&&!empty($_POST["product"])){
     $params+=[":name"=>"%$prod%"];
 }
 if(isset($_POST["price"])){
-        $query.=" ORDER BY unit_price ASC LIMIT 10";    
+        $query.=" ORDER BY unit_price ASC";    
     }
 else{
-    $query.=" ORDER BY modified DESC LIMIT 10";
+    $query.=" ORDER BY modified DESC";
 }
+$query.=" LIMIT $this_page_first_result,$results_per_page";
 $db=getDB();
 $stmt=$db->prepare($query);
 $products=[];
@@ -84,6 +110,14 @@ catch (PDOException $e) {
         <?php endif; ?>
     </tbody>
 </table>
+<h4> Select Page </h4>
+<?php
+ for($page=1;$page<=$number_of_pages;$page++){
+    
+    $loc="shop.php?page=$page";
+    echo "<a href=$loc>$page </a>";
+}
+?>
 <?php
 require(__DIR__ . "/../../partials/flash.php");
 ?>
