@@ -8,6 +8,31 @@ if (!(has_role("Admin")||has_role("Shop_Owner"))) {
 }
 ?>
 <?php
+$results_per_page=2;
+$ratings=[];
+$query="SELECT * FROM Products WHERE visibility=1";
+$db=getDB();
+$stmt=$db->prepare($query);
+try{
+  $stmt->execute();
+  $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  if($results){
+      $ratings=$results;
+  }
+  
+}
+catch(Exception $e){
+  flash("<pre>" . var_export($e, true) . "</pre>");
+}
+$number_of_results= count($ratings);
+$number_of_pages=ceil($number_of_results/$results_per_page);
+if(!isset($_GET["page"])){
+    $page=1;
+}
+else{
+    $page=$_GET["page"];
+}
+$this_page_first_result=($page-1)*$results_per_page;
 $query="SELECT id,name from Products WHERE (visibility=1 OR visibility=0)";
 $params=[];
 if(isset($_POST["category"])&&!empty($_POST["category"])){
@@ -20,12 +45,16 @@ if(isset($_POST["product"])&&!empty($_POST["product"])){
     $query.=" AND name LIKE :name";
     $params+=[":name"=>"%$prod%"];
 }
+if(isset($_POST["stock"])&&!empty($_POST["stock"])){
+    $query.=" AND stock=0";
+}
 if(isset($_POST["price"])){
-        $query.=" ORDER BY unit_price ASC LIMIT 10";    
+        $query.=" ORDER BY unit_price ASC";    
     }
 else{
-    $query.=" ORDER BY modified DESC LIMIT 10";
+    $query.=" ORDER BY modified DESC";
 }
+$query.=" LIMIT $this_page_first_result,$results_per_page";
 $db=getDB();
 $stmt=$db->prepare($query);
 $products=[];
@@ -59,6 +88,9 @@ catch (PDOException $e) {
     <label for="price"><b>Sort by Price</b></label>
     <input id="price" type="checkbox" name="price" value="yes">
     <br>
+    <label for="stock"><b>See Items out of Stock</b></label>
+    <input id="stock" type="checkbox" name="stock" value="yes">
+    <br>
     <input type="submit" value="filter" />
     <br>
    
@@ -84,6 +116,14 @@ catch (PDOException $e) {
         <?php endif; ?>
     </tbody>
 </table>
+<h4> Select Page </h4>
+<?php
+ for($page=1;$page<=$number_of_pages;$page++){
+    
+    $loc="list_items.php?page=$page";
+    echo "<a href=$loc>$page </a>";
+}
+?>
 <?php
 //note we need to go up 1 more directory
 require_once(__DIR__ . "/../../../partials/flash.php");
