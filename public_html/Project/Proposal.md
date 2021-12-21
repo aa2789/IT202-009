@@ -458,15 +458,18 @@
         - ![image](https://user-images.githubusercontent.com/71272971/146502416-1e9cd564-4abf-4ca4-a8fd-499c42cb8a73.png)
           - Shows that it accounts for pagination because there are no results if I filter by zero stock on a page that doesn't show the mini fridge item.             
     
-  - [ ] (mm/dd/yyyy of completion) User can sort products by average rating on the Shop Page
+  - [x] (12/21/2021) User can sort products by average rating on the Shop Page
     -  List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Status: Completed
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/aa2789/IT202-009/pull/78
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show                                                            
+        - ![image](https://user-images.githubusercontent.com/71272971/146994552-09b1dac1-0d23-44cf-a88f-62a1d0656c40.png)
+          - Image of the products database. Added a column for average rating of the product.     
+        - ![image](https://user-images.githubusercontent.com/71272971/146994703-3d64fed8-86e9-458e-8b05-041a5edd1598.png)
+          - Shows that the first page only shows iPad and airpods because it is ordered in ascending order of product ratings.                                                           
+                                                             
 
 ### Intructions
 #### Don't delete this
