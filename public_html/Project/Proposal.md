@@ -1,6 +1,6 @@
 # Project Name: Simple Shop
 ## Project Summary: This project will create a simple e-commerce site for users. Administrators or store owners will be able to manage inventory and users will be able to manage their cart and place orders.
-
+## Demo Video Link:https://www.youtube.com/watch?v=GhsTk3u6uvg
 ## Github Link: https://github.com/aa2789/IT202-009/tree/prod
 ## Project Board Link: https://github.com/aa2789/IT202-009/projects/1
 ## Website Link: https://aa2789-prod.herokuapp.com/Project
@@ -364,6 +364,111 @@
         - ![image](https://user-images.githubusercontent.com/71272971/144892727-8f7001ee-416e-4da4-a5ac-ea1a77ed56a7.png)
           - A list item can be clicked to view the full details in the Order Details Page.
 - Milestone 4
+  - [x] (12/09/2021)User can set their profile to be public or private
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/profile.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/70
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/145447569-86751bf1-1dee-4b21-8e26-efddf8876272.png))
+          - User can choose whether they want to make their profile public or private. If both checkboxes are selected, then an error is given. 
+        - ![image](https://user-images.githubusercontent.com/71272971/145447838-54455374-a937-4ba3-8518-6224dd8e95a9.png)
+          - Code snippet for changing profile visibility.           
+  - [x] (12/13/2021) User will be able to rate a product they purchased
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/details.php?id=3
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/71
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/145897267-439f4fac-0203-4c90-81b8-4d95d9a87bcf.png)
+          - Create table called Ratings
+        - ![image](https://user-images.githubusercontent.com/71272971/145897417-8324cb9f-5a0a-4439-b177-099789b61052.png)
+          - 1-5 Rating, Text comment,  must be done on the products details page, latest 10 Ratings and Rating Comments will be visible on the Product Details page,( pagination is kind of hard to see since theres currently less than 10 reviews so there is currently only one page clickable as a link in the bottom), shows the average rating.        
+  - [x] (12/14/2021)User’s Purchase History Changes
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/purchaseHistory.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/72
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/146121223-91d19c40-13c2-4442-b501-2c4b1e520240.png)
+          - Orders Database
+        - ![image](https://user-images.githubusercontent.com/71272971/146121762-22cc105f-5fc1-4b07-aeea-fe1b7f6e1fb5.png)
+          - Shows the user's purchase history page before any filters are applied.            
+        - ![image](https://user-images.githubusercontent.com/71272971/146121538-90c2c5a8-4858-4b25-a71c-f3ccff8626cb.png)
+          - Shows the products the user purchased that fall in the date between 12/4/2021 and 12/6/2021. Filters purchase history by date range.        
+        - ![image](https://user-images.githubusercontent.com/71272971/146121687-604b895a-f073-43ed-83b6-df6784d4c017.png)
+          - Sort by cost of purchase in ascending order.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146122008-7484a884-b11c-4f60-ae4c-cb53440d567b.png)
+          - Sort by date purchased
+        - ![image](https://user-images.githubusercontent.com/71272971/146122105-37683d8f-2e04-4bc1-b7e8-41d82015ab21.png)
+          - Add pagination. User can move through pages that can hold 10 purchases each. Right now the user only has 2 purchases so there is only one page because the maximum results per page is 10. When I make the results per page equal to 1 then there are two pages with 1 product each, so it should work.                    
+  - [x] (12/16/2021) Store Owner Purchase History Changes
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/admin/admin_history.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/73
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/146322336-d31836eb-c742-461c-b5a4-59e240e0e4b1.png)
+          - Orders database that shows the purchase history of all users.
+        - ![image](https://user-images.githubusercontent.com/71272971/146322947-834ef0bc-7358-4508-b8d6-17f08422c76a.png)
+          - This shows how the page looks like before any filters were applied.      
+        - ![image](https://user-images.githubusercontent.com/71272971/146323123-7e6159e8-4d31-4a47-a50d-19660d5f652a.png)
+          - Page after date range filter is applied between the dates of 12/2 and 12/3
+        - ![image](https://user-images.githubusercontent.com/71272971/146323228-2c32b79b-4b6b-4684-8649-ca9315a9bcca.png)
+          - Sort by cost of purchase in ascending order     
+        - ![image](https://user-images.githubusercontent.com/71272971/146323362-1bdc549c-202a-452c-876c-577ada1719ac.png)
+          - sort by date purchased in ascending order.    
+        - ![image](https://user-images.githubusercontent.com/71272971/146323456-ce4136de-e377-49b0-90eb-480d0627b090.png)
+          - This is how the second page of the orders history table looks like. The total results per page is 2 and there are only 3 order items so the second page only has one product right now. 
+        - ![image](https://user-images.githubusercontent.com/71272971/146323758-ed0f92fb-a612-4f66-a824-1700e76b409c.png)
+          - The result page should show the accurate total price of the combined search results. Shows that the combined total of two orders of $185 and $21 is $206.
+          
+  - [x] (12/17/2021) Add pagination to Shop Page 
+    -  List of Evidence of Feature Completion
+      - Status:Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/shop.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/74
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/146496312-2a8855d9-17d9-4166-a5dc-bcd35285fd8d.png)
+          - Image of Products DB
+        - ![image](https://user-images.githubusercontent.com/71272971/146496449-bf6feb39-4b87-4c33-a07e-2bc8b8795c6e.png)
+          - Image of first page of the pagination.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146496511-16fc8955-6ecb-41ba-bc93-fce7ed8d0cc8.png)
+          - Image of the second page of the pagination.   
+        - ![image](https://user-images.githubusercontent.com/71272971/146496556-a4a25806-0c4a-48c2-8b70-6b1a1925df0a.png)
+          - Image of the third page of the pagination.                        
+  - [x] (12/17/2021)Store Owner will be able to see all products out of stock
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-dev.herokuapp.com/Project/admin/list_items.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/75
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/146501725-d1737545-54a4-4562-9dcd-9eedd61d1975.png)
+          - Products DB( mini fridge has 0 stock)
+        - ![image](https://user-images.githubusercontent.com/71272971/146502158-b12b9d14-d075-479b-a54e-9dbb413de158.png)
+          - Image of the shop page before any filters.            
+        - ![image](https://user-images.githubusercontent.com/71272971/146502097-2e951c92-7abe-4e33-b887-336d4c800757.png)
+          - Store owner will be able to see all items out of stock.
+        - ![image](https://user-images.githubusercontent.com/71272971/146502416-1e9cd564-4abf-4ca4-a8fd-499c42cb8a73.png)
+          - Shows that it accounts for pagination because there are no results if I filter by zero stock on a page that doesn't show the mini fridge item.             
+    
+  - [x] (12/21/2021) User can sort products by average rating on the Shop Page
+    -  List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/shop.php
+      - Pull Requests
+        - https://github.com/aa2789/IT202-009/pull/78
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/71272971/146994552-09b1dac1-0d23-44cf-a88f-62a1d0656c40.png)
+          - Image of the products database. Added a column for average rating of the product.     
+        - ![image](https://user-images.githubusercontent.com/71272971/146994703-3d64fed8-86e9-458e-8b05-041a5edd1598.png)
+          - Shows that the first page only shows iPad and airpods because it is ordered in ascending order of product ratings
 ### Intructions
 #### Don't delete this
 1. Pick one project type
