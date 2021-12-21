@@ -367,7 +367,7 @@
   - [x] (12/09/2021)User can set their profile to be public or private
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/profile.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/70
       - Screenshots
@@ -378,7 +378,7 @@
   - [x] (12/13/2021) User will be able to rate a product they purchased
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/details.php?id=3
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/71
       - Screenshots
@@ -389,7 +389,7 @@
   - [x] (12/14/2021)User’s Purchase History Changes
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/purchaseHistory.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/72
       - Screenshots
@@ -408,7 +408,7 @@
   - [x] (12/16/2021) Store Owner Purchase History Changes
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/admin/admin_history.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/73
       - Screenshots
@@ -430,7 +430,7 @@
   - [x] (12/17/2021) Add pagination to Shop Page 
     -  List of Evidence of Feature Completion
       - Status:Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/shop.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/74
       - Screenshots
@@ -445,7 +445,7 @@
   - [x] (12/17/2021)Store Owner will be able to see all products out of stock
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-dev.herokuapp.com/Project/admin/list_items.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/75
       - Screenshots
@@ -461,7 +461,7 @@
   - [x] (12/21/2021) User can sort products by average rating on the Shop Page
     -  List of Evidence of Feature Completion
       - Status: Completed
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://aa2789-prod.herokuapp.com/Project/shop.php
       - Pull Requests
         - https://github.com/aa2789/IT202-009/pull/78
       - Screenshots
