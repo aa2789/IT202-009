@@ -45,6 +45,9 @@ if(isset($_POST["product"])&&!empty($_POST["product"])){
 if(isset($_POST["price"])){
         $query.=" ORDER BY unit_price ASC";    
     }
+else if(isset($_POST["rating"])){
+       $query.=" ORDER BY average_rating DESC";
+}
 else{
     $query.=" ORDER BY modified DESC";
 }
@@ -82,6 +85,8 @@ catch (PDOException $e) {
     <label for="price"><b>Sort by Price</b></label>
     <input id="price" type="checkbox" name="price" value="yes">
     <br>
+    <label for="rating"><b>Sort by Rating</b></label>
+    <input id="rating" type="checkbox" name="rating" value="yes">
     <input type="submit" value="filter" />
     <br>
    

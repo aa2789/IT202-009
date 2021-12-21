@@ -168,12 +168,31 @@ if(isset($_POST["submitRating"])){
     $query="INSERT INTO Ratings(product_id,user_id,rating,comment) VALUES (:product_id,:user_id,:rating,:comment)";
     $db=getDB();
     $stmt=$db->prepare($query);
+     $flag=false;
     try {
         $stmt->execute([":product_id" => $productID, ":user_id" => $userID, ":rating" => $rating,":comment"=>$comment]);
+        $flag=true;
     } catch (Exception $e) {
         flash("There was a problem adding the rating","danger");
         flash("<pre>" . var_export($e, true) . "</pre>");
         
+    }
+    if($flag==true){
+        if(count($ratings)==0){
+            $averageRating=0;
+        }
+        $currSum=$averageRating+$rating;
+        $num=count($ratings)+1;
+        $avg=$currSum/$num;
+        $query="UPDATE Products SET average_rating=$avg WHERE id=$productID";
+        $db=getDB();
+        $stmt=$db->prepare($query);
+        try{
+            $stmt->execute();
+        }
+        catch(Exception $e){
+            flash("There was a problem updating the average rating");
+        }
     }
 
 }
